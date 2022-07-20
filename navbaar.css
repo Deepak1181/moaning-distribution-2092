@@ -1,0 +1,49 @@
+#navbaar{
+     display: flex;
+     justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-size:20px;
+    
+}
+#navbaar>div>img{
+   
+   height: 50px;
+   
+   margin-top: 10px;
+   margin-left: 20px;
+  
+  
+}
+#navsec{
+    display: flex;
+    justify-content: space-around;
+   background-color: black;
+   color: white;
+ 
+  
+}
+p,select{
+    margin:25px 40px 25px 0px;
+}
+#select{
+    width: 70px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: black;
+    color:white ;
+   border:0px solid black;
+    font-size: 19px;
+}
+#search-box>input{
+    border-radius: 50px 50px 50px 50px ;
+    border: 1px solid rgb(240, 240, 238);
+    padding: 7px;
+    margin: 21px;
+
+}
+.fa-solid{
+   color: rgb(253, 253, 253);
+   margin-top: 25px;
+  margin-right: 20px;
+}

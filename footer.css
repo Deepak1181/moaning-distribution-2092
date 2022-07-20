@@ -1,0 +1,52 @@
+#footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: black;
+    color: rgb(155, 149, 149);
+    padding: 30px;
+}
+
+#first{
+    background-color: black;
+    color: aliceblue;
+   
+}
+#btn{
+   border: 0.5px solid rgb(247, 247, 245);
+   width: 360px;
+   background-color:black;
+   border-radius: 4px;
+   
+}
+#btn>input{
+    border: 0px solid  black;
+    height: 41px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+
+ }
+ #btn>button{
+   background-color: red;
+   color: white;
+   height: 38px;
+   border: 0px ;
+   font-weight: bold;
+   width: 148px;
+   margin-left: 31px;
+   border-radius: 4px;
+ }
+ #second{
+    display: flex;
+    gap: 60px;
+ }
+ #second>div>h3{
+   color: white;
+  
+ }
+ #logo>i{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100px;
+    width: 50;
+ }

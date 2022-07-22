@@ -7,87 +7,64 @@
    
     <title>home</title>
   <link rel="" href="">
+  <link rel="stylesheet" href="home1.css">
+  <link rel="stylesheet" href="navbaar.css">
    <script src="https://kit.fontawesome.com/7448a901b0.js" crossorigin="anonymous"></script>
   </head>
 
   <style>
-    #complete{
-        background-color: black;
-    }
-    #heading{
-        font-size:xx-large;
-        text-align: center;
-        color:white
-    }
-    #head{
-     
-      display:grid;
-grid-template-columns: repeat(4,1fr);
-gap:20px;
-background-color: rgb(7, 7, 7);
-
-    }
- #seller{
-
-      border-radius: 10px;
-      gap: 10px;
-      
-      width: 260px;
-     border: 1px solid rgb(199, 188, 209);
-     
-
-    
-      
- }
-
-  #seller>div>img{
-height:250px;
-background-color: rgb(199, 188, 209);
-border-radius: 9px;
-width:250px;
-gap:20px;
-
-
-
- }
-
-
-
-#seller>div{
-  border-radius: 9px;
-  
-background-color: white;
-width: 250px;
-padding: 5px;
-gap: 10px;
-
-
-
-}
-#seller,h4,h2,p{
- 
-  margin-left:13px ;
-}
-
-#seller>div>button{
- background-color: red;
- color: white;
- font-weight: bolder;
- width: 210px;
- border-radius: 5px;
- height: 35px;
- margin-left: 15px;
-
-} 
-#seller>div>h2{
- color: red;
-} 
-#seller>div>h2,p,hr,button{
- margin-top: -8px;
-}  
+   
 
   </style>
   <body>
+
+
+
+
+
+
+    <div id="navbaar">
+      <div>
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229" alt="">
+      </div>
+    
+  <div id="navsec">
+      <p>Shop</p> 
+      <p>Daily Deals</p> 
+      <p>Offer Zone</p>
+      <select id="select">
+          <option value="More">More</option>
+      <option value="Gifting">Gifting</option>
+      <option value="Do">Do What Floats Your BoAt</option>
+      <option value="Blogs">Blogs</option>
+      <option value="Meet">Meet the boAtheads</option>
+      <option value="Order">Coaporate Orders</option>
+      <option value="Earn">Earn Rs.100</option>
+      <option value="Social">Social Responsibility</option>
+      </select>
+      <div id="search-box">
+        <input type="text" placeholder="Search....">
+  
+      </div>
+     
+      <a href="login.html"> <i class="fa-solid fa-sailboat"> </i></a>
+     <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
+  </div>
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="complete">
  
@@ -102,7 +79,7 @@ gap: 10px;
     <hr>
     <h2>₹ 1299</h2>
     <p>You Save: Rs 1691(57%)</p>
-    <button>ADD TO CART</button>
+    <button    onclick="addToCart(event)">ADD TO CART</button >
   </div> 
 </div> 
 
@@ -115,7 +92,7 @@ gap: 10px;
     <hr>
     <h2>₹ 1299</h2>
     <p>You Save: Rs 1691(57%)</p>
-    <button>ADD TO CART</button>
+    <button   onclick="addToCart(event)">ADD TO CART</button >
   </div>
 </div>
   
@@ -129,7 +106,7 @@ gap: 10px;
     <hr>
     <h2>₹ 1799</h2>
     <p>You Save: Rs 5191(74%)</p>
-    <button>ADD TO CART</button>
+    <button onclick="addToCart(event)" >ADD TO CART</button >
    </div> 
 </div> 
 
@@ -142,7 +119,7 @@ gap: 10px;
     <hr>
     <h2>₹499</h2>
     <p>You Save: Rs 2991(67%)</p>
-    <button>ADD TO CART</button>
+    <button onclick="addToCart(event)">ADD TO CART</button >
    </div> 
 
 </div> 
@@ -170,7 +147,7 @@ gap: 10px;
    <hr>
    <h2>₹ 379</h2>
    <p>You Save: Rs 620(62%)</p>
-   <button>ADD TO CART</button>
+   <button onclick="addToCart(event)">ADD TO CART</button >
  </div> 
 </div> 
 
@@ -183,7 +160,7 @@ gap: 10px;
    <hr>
    <h2> ₹ 1499</h2>
    <p>You Save: Rs 1491(570)</p>
-   <button>ADD TO CART</button>
+   <button onclick="addToCart(event)">ADD TO CART</button >
  </div>
 </div>
  
@@ -197,7 +174,7 @@ gap: 10px;
    <hr>
    <h2> ₹ 1199</h2>
    <p>You Save: ₹ 1,791 (60%)</p>
-   <button>ADD TO CART</button>
+   <button onclick="addToCart(event)">ADD TO CART</button >
   </div> 
 </div> 
 
@@ -210,7 +187,7 @@ gap: 10px;
    <hr>
    <h2>₹ 449</h2>
    <p>You Save: ₹ 841 (65%)</p>
-   <button>ADD TO CART</button>
+   <button onclick="addToCart(event)">ADD TO CART</button >
   </div> 
 
 </div> 
@@ -239,7 +216,7 @@ gap: 10px;
    <h2>₹ 1,999
     </h2>
    <p>You Save: ₹ 5991 (75%)</p>
-   <button>Pre-order</button>
+   <button onclick="addToCart(event)">Pre-order</button >
  </div> 
 </div> 
 
@@ -252,7 +229,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1299</h2>
    <p>You Save: Rs 1691(57%)</p>
-   <button>Pre-order</button>
+   <button onclick="addToCart(event)">Pre-order</button >
  </div>
 </div>
  
@@ -266,7 +243,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1799</h2>
    <p>You Save: Rs 5191(74%)</p>
-   <button>Pre-order</button>
+   <button onclick="addToCart(event)">Pre-order</button >
   </div> 
 </div> 
 
@@ -279,7 +256,7 @@ gap: 10px;
    <hr>
    <h2>₹499</h2>
    <p>You Save: Rs 2991(67%)</p>
-   <button>Pre-order</button>
+   <button onclick="addToCart(event)">Pre-order</button >
   </div> 
 
 </div> 
@@ -307,7 +284,7 @@ gap: 10px;
   <hr>
   <h2>₹ 3499</h2>
   <p>You Save: ₹ 4491 (56%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
 </div> 
 </div> 
 
@@ -320,7 +297,7 @@ gap: 10px;
   <hr>
   <h2> ₹ 3299</h2>
   <p>You Save: ₹ 3691 (53%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
 </div>
 </div>
 
@@ -334,7 +311,7 @@ gap: 10px;
   <hr>
   <h2> ₹ 1199</h2>
   <p>You Save: ₹ 1,791 (60%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
  </div> 
 </div> 
 
@@ -347,7 +324,7 @@ gap: 10px;
   <hr>
   <h2>₹ 3999</h2>
   <p>You Save: ₹ 2991 (43%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
  </div> 
 
 </div> 
@@ -381,7 +358,7 @@ gap: 10px;
    <h2>₹ 999
     </h2>
    <p>You Save: ₹ 1991 (67%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
  </div> 
 </div> 
 
@@ -394,7 +371,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1599</h2>
    <p>You Save: ₹ 2391 (60%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
  </div>
 </div>
  
@@ -408,7 +385,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1,199</h2>
    <p>You Save: ₹ 1791 (60%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
   </div> 
 </div> 
 
@@ -421,7 +398,7 @@ gap: 10px;
    <hr>
    <h2>₹1499</h2>
    <p>You Save: Rs 2491(62%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
   </div> 
 
 </div> 
@@ -449,7 +426,7 @@ gap: 10px;
   <hr>
   <h2>₹ 1299</h2>
   <p>You Save: ₹ 4491 (56%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
 </div> 
 </div> 
 
@@ -462,7 +439,7 @@ gap: 10px;
   <hr>
   <h2> ₹ 1499</h2>
   <p>You Save: ₹ 3691 (53%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
 </div>
 </div>
 
@@ -476,7 +453,7 @@ gap: 10px;
   <hr>
   <h2> ₹ 1199</h2>
   <p>You Save: ₹ 1,999 (60%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
  </div> 
 </div> 
 
@@ -489,7 +466,7 @@ gap: 10px;
   <hr>
   <h2>₹ 1299</h2>
   <p>You Save: ₹ 2991 (43%)</p>
-  <button>ADD TO CART</button>
+  <button onclick="addToCart(event)">ADD TO CART</button >
  </div> 
 
 </div> 
@@ -515,7 +492,7 @@ gap: 10px;
    <h2>₹ 999
     </h2>
    <p>You Save: ₹ 1991 (67%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
  </div> 
 </div> 
 
@@ -528,7 +505,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1599</h2>
    <p>You Save: ₹ 2391 (60%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)" >Add to cart</button >
  </div>
 </div>
  
@@ -542,7 +519,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1,199</h2>
    <p>You Save: ₹ 1791 (60%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
   </div> 
 </div> 
 
@@ -555,7 +532,7 @@ gap: 10px;
    <hr>
    <h2>₹1499</h2>
    <p>You Save: Rs 2491(62%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)" >Add to cart</button >
   </div> 
 
 </div> 
@@ -586,7 +563,7 @@ gap: 10px;
    <h2>₹ 3199
     </h2>
    <p>You Save: ₹ 1991 (67%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
  </div> 
 </div> 
 
@@ -599,7 +576,7 @@ gap: 10px;
    <hr>
    <h2>₹ 4499</h2>
    <p>You Save: ₹ 5391 (60%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
  </div>
 </div>
  
@@ -613,7 +590,7 @@ gap: 10px;
    <hr>
    <h2>₹ 1,199</h2>
    <p>You Save: ₹ 1791 (60%)</p>
-   <button>Add to cart</button>
+   <button   onclick="addToCart()">Add to cart</button >
   </div> 
 </div> 
 
@@ -626,7 +603,7 @@ gap: 10px;
    <hr>
    <h2>₹9999</h2>
    <p>You Save: Rs 14491(62%)</p>
-   <button>Add to cart</button>
+   <button onclick="addToCart(event)">Add to cart</button >
   </div> 
 
 </div> 
@@ -645,28 +622,28 @@ gap: 10px;
 </html>
 
 <script>
-     let data =[
-       {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MG_400x.png?v=1657775492",
-       name:"boAt Airdopes Pro",
-       price:1299,
-       save:"You Save: Rs 1691(57%)",
-       button:"ADD TO CART" },
-       {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",
-       name:"boAt Airdopes 131 ",
-       price:1299,
-       save:"You Save: Rs 1691(57%)",
-       button:"ADD TO CART" },
-       {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_72207866-b34c-4b47-885d-998168d62245_400x.png?v=1648108781",
-       name:"boAt Watch Wave Lite",
-       price:1799,
-       save:"You Save: Rs 5191(74%)",
-       button:"ADD TO CART" },
-        {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/white_600x.png?v=1657869596",
-       name:"boAt Airdopes 141",
-       price:1499,
-       save:"You Save: Rs 2991(67%)",
-       button:"ADD TO CART" },
-     ]
+    //  let data =[
+    //    {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MG_400x.png?v=1657775492",
+    //    name:"boAt Airdopes Pro",
+    //    price:1299,
+    //    save:"You Save: Rs 1691(57%)",
+    //    button :"ADD TO CART" },
+    //    {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",
+    //    name:"boAt Airdopes 131 ",
+    //    price:1299,
+    //    save:"You Save: Rs 1691(57%)",
+    //    button :"ADD TO CART" },
+    //    {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_72207866-b34c-4b47-885d-998168d62245_400x.png?v=1648108781",
+    //    name:"boAt Watch Wave Lite",
+    //    price:1799,
+    //    save:"You Save: Rs 5191(74%)",
+    //    button :"ADD TO CART" },
+    //     {images: imgages="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/white_600x.png?v=1657869596",
+    //    name:"boAt Airdopes 141",
+    //    price:1499,
+    //    save:"You Save: Rs 2991(67%)",
+    //    button :"ADD TO CART" },
+    //  ]
 
 
 // data.forEach(function(el,index){
@@ -696,8 +673,8 @@ gap: 10px;
 //     createsave.innerText=el.save
 
 
-//     let createbutton = document.createElement("button")
-//     createbutton.innerText=el.button
+//     let createbutton = document.createElement("button ")
+//     createbutton.innerText=el.button 
 
 //     div2.append(createname,createhr,createprice,createsave,createbutton)
 //     document.querySelector("#sellerpart").append(div2)
@@ -705,7 +682,20 @@ gap: 10px;
 // })
     
 
- 
+ let cartLS = JSON.parse(localStorage.getItem("cart-page"))||[]
 
+function addToCart(event){
+      let data =   event.target.parentNode.children;
+     let obj = {
+          img : data[0].currentSrc,
+          h4: data[1].innerText,
+          h2: data[3].innerText,
+          p:data[4].innerText,
+
+     }
+      console.log(data)
+    cartLS.push(obj)
+    localStorage.setItem( "cart-page",JSON.stringify(cartLS))
+}
 
 </script>

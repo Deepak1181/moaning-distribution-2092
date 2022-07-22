@@ -1,0 +1,75 @@
+#complete{
+    background-color: black;
+    margin-top: -27px;
+}
+#heading{
+    font-size:xx-large;
+    text-align: center;
+    color:white
+}
+#head{
+ 
+  display:grid;
+grid-template-columns: repeat(4,1fr);
+gap:20px;
+background-color: rgb(7, 7, 7);
+
+}
+#seller{
+
+  border-radius: 10px;
+  gap: 10px;
+  
+  width: 260px;
+ border: 1px solid rgb(199, 188, 209);
+ 
+
+
+  
+}
+
+#seller>div>img{
+height:250px;
+background-color: rgb(199, 188, 209);
+border-radius: 9px;
+width:250px;
+gap:20px;
+
+
+
+}
+
+
+
+#seller>div{
+border-radius: 9px;
+
+background-color: white;
+width: 250px;
+padding: 5px;
+gap: 10px;
+
+
+
+}
+#seller,h4,h2,p{
+
+margin-left:13px ;
+}
+
+#seller>div>button{
+background-color: red;
+color: white;
+font-weight: bolder;
+width: 210px;
+border-radius: 5px;
+height: 35px;
+margin-left: 15px;
+
+} 
+#seller>div>h2{
+color: red;
+} 
+#seller>div>h2,p,hr,button{
+margin-top: -8px;
+}  

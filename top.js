@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-    <title>document</title>
-  <link rel="stylesheet" href="navbaar.css">
-  <link rel="stylesheet" href="top.css">
- 
-   <script src="https://kit.fontawesome.com/7448a901b0.js" crossorigin="anonymous"></script>
-  </head>
-  <style>
-
-  </style>
-  <body>
- 
-  <div>
-     <img id="crauser" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/gif--new_1400x.gif?v=1658249062" alt="">
-     <button id="left"><</button>
-     <button id="right">></button>
-   
-  </div>
-
-  </body>
-</html>
-
-<script>
-  images=[
+images=[
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/deal-of-the-day-new_1400x.png?v=1657957011",
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/gif--new_1400x.gif?v=1658249062",
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/A-131-Banner_0e6d2056-3bd5-4ee0-8bd3-7a2a50e30e30_1400x.jpg?v=1657953240","https://cdn.shopify.com/s/files/1/0057/8938/4802/files/wireless-banner_1_1400x.png?v=1657290971",
@@ -49,4 +20,3 @@ let imagestate =0
          }
         crauser.src=images[imagestate]
     });
-</script>

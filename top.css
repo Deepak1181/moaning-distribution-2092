@@ -1,0 +1,23 @@
+div{
+    width: 100%;
+    position: relative;
+    
+}
+img{
+    width: 100%;
+}
+button{
+    position: absolute;
+    top:38%;
+    font-size:50px;
+    font-weight:1000;
+    background-color: rgb(230, 13, 13,00.008);
+   color:red;
+   border: 0px;
+}
+button:nth-child(2){
+    left:5px
+}
+button:nth-child(3){
+    right:5px
+}

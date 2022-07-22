@@ -44,9 +44,11 @@ p{
  <form >
    
     <input id= email type="text" placeholder="E-mail"><br>
-    <input id= password type="text" placeholder="Password">
+    <input id= password type="text" placeholder="Password"><br>
+  
+    <button typeof="submit">LOGIN</button>
  </form>
- <button>LOGIN</button>
+
  <p>New customer <a href="registration.html">Create an account</a></p>
 </div>
 
@@ -54,6 +56,34 @@ p{
 </html>
 
 <script>
+let signupArr= JSON.parse(localStorage.getItem("signup"))||[]
+ let form = document.querySelector("form").addEventListener("submit",createlogin)
 
+ function createlogin(event){
+event.preventDefault()
 
+ let obj={
+email:document.querySelector("#email").value,
+password:document.querySelector("#password").value,
+ }
+
+ if(checksignin(obj.email,obj.password)==true){
+  localStorage.setItem("signin",JSON.stringify(obj))
+alert("sign is successful")
+window.location.href="home1.html"
+}else{
+  alert("wrong email or password")
+}
+
+ }
+ function checksignin(email,password){
+  let filter = signupArr.filter(function(ele){
+    return ele.email===email&&ele.password===password
+  })
+   if(filter.length>0){
+    return true
+   }else{
+    return false
+   }
+ }
 </script>

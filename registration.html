@@ -6,33 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    
     <title>document</title>
-  <link rel="stylesheet" href="navbaar.css">
+  <link rel="stylesheet" href="registration.css">
    <script src="https://kit.fontawesome.com/7448a901b0.js" crossorigin="anonymous"></script>
   </head>
   <style>
 
-#register{
-    background-color: rgb(43, 39, 39);
-    color: white;
-    text-align: center;
-   justify-content: center;
-   padding: 20px;
-}
-#register>div,input,button{
-    margin-top: 10px;
-  padding: 10px 30px;
-  background-color: rgb(43, 39, 39);
-  color: white;
-}
-button{
-    background-color: red;
-    color: white;
-    border: 0px;
-    padding: 10px 50px;
-}
-p{
-    margin-left: 30px;
-}
+
 
   </style>
   <body>
@@ -40,13 +19,14 @@ p{
  <h1>Register</h1>
  <p>Please fill in the fields below</p>
 
- <form >
+ <form>
     <input id= Fname type="text" placeholder="First Name"><br>
     <input id= Lname type="text" placeholder="Lasr Name"><br>
     <input id= email type="text" placeholder="E-mail"><br>
-    <input id= password type="text" placeholder="Password">
+    <input id= password type="number" placeholder="Password"><br>
+    <button type="submit">CREATE ACCOUNT</button>
  </form>
- <button>CREATE ACCOUNT</button>
+
  <p>Already have an account? <a href="login.html">login</a></p>
 </div>
 
@@ -54,6 +34,42 @@ p{
 </html>
 
 <script>
+let form = document.querySelector("form").addEventListener("submit",createsign)
 
+let signupArr= JSON.parse(localStorage.getItem("signup"))||[]
+function createsign(event){
+event.preventDefault()
+
+let obj = {
+ 
+ fname:document.querySelector("#Fname").value,
+ lname:document.querySelector("#Lname").value,
+ email:document.querySelector("#email").value,
+ password:document.querySelector("#password").value,
+
+}
+if(checkemail(obj.email)===true){
+  signupArr.push(obj)
+localStorage.setItem("signup",JSON.stringify(signupArr))
+  }else{
+    alert("Account is already exist ")
+  }
+function checkemail(email){
+  let filtered= signupArr.filter(function(el){
+    return email===el.email
+  })
+  if(filtered.length>0){
+    return false
+  }else{
+    return true;
+  }
+}
+
+
+  
+
+
+
+}
 
 </script>

@@ -4,11 +4,13 @@
     background-color: black;
     color: rgb(155, 149, 149);
     padding: 30px;
+    margin-top: 10px;
 }
 
 #first{
     background-color: black;
     color: aliceblue;
+    
    
 }
 #btn{

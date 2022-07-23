@@ -1,0 +1,25 @@
+#headbottom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    gap: 20px;
+    margin: auto;
+}
+
+#headbottom>div>img{
+  height:190px ;
+
+}
+h1{
+    text-align: center;
+}
+button{
+   
+    background-color: red;
+    color:white;
+    font-weight: bolder;
+    padding: 10px;
+   margin-left: 600px;
+    border-radius: 5px;
+    border: 0px;
+}

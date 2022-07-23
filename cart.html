@@ -7,16 +7,249 @@
    
     <title>document</title>
   <link rel="stylesheet" href="navbaar.css">
+  <link rel="stylesheet" href="home1.html">
+  <link rel="stylesheet" href="footer.css">
    <script src="https://kit.fontawesome.com/7448a901b0.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <style>
+
+tr,th{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+gap:30px;
+
+  
+}
+tr{
+  margin-top: 20px;
+}
+
+img{
+  height: 150px;
+}
+#cash{
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+}
+#card{
+  background-color:white;
+  color: red;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+
+  </style>
+  <body a link="white">
  
-  <h1> hello </h1>
+    <div id="navbaar">
+      <div>
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.png?v=1646731229" alt="">
+      </div>
+    
+  <div id="navsec">
+    <p><a href="home1.html">Shop</a></p> 
+      <p>Daily Deals</p> 
+      <p>Offer Zone</p>
+      <select id="select">
+          <option value="More">More</option>
+      <option value="Gifting">Gifting</option>
+      <option value="Do">Do What Floats Your BoAt</option>
+      <option value="Blogs">Blogs</option>
+      <option value="Meet">Meet the boAtheads</option>
+      <option value="Order">Coaporate Orders</option>
+      <option value="Earn">Earn Rs.100</option>
+      <option value="Social">Social Responsibility</option>
+      </select>
+      <div id="search-box">
+        <input type="text" placeholder="Search....">
+  
+      </div>
+     
+      <a href="login.html"> <i class="fa-solid fa-sailboat"> </i></a>
+     <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
+  </div>
+   
+  </div>
+
+
+
+
+  </div>
+  <hr>
+  <main>
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Action</th>
+       
+    </tr>
+  </thead>
+  <tbody id="tbody">
+    
+  </tbody>
+</table>
+      
+   
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <h1>Total price:- <span id="price">0</span></h1>
+
+<h2>Continous Shopping</h2>
+
+<button id="cash"><a href="deliver.html">CASH ON DELIVERY</a></button> <br><br>
+<button id="card">PAY VIA CARD</button>
+
+
+
+
+  
+
+
+
+<div id="footer">
+  <div id="first">
+  <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" alt="">
+  <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+  
+  <div id="btn">
+      <input type="text" placeholder="Email Address*">
+      <button>Subscribe</button>
+  </div>
+  <div id="logo">
+      <i class="fa-brands fa-facebook-f"></i>
+  <i class="fa-brands fa-twitter"></i>
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-youtube"></i>
+  <i class="fa-brands fa-linkedin-in"></i>
+  </div>
+  
+  
+  </div>
+  <div id="second">
+  <div>
+      <h3>SHOP</h3>
+      <p>True Wireless Earbuds</p>
+      <p>Wired Headphones</p>
+      <p>Wireless Speakers</p>
+      <p>Home Audio</p>
+      <p>Mobile Accessories</p>
+      <p>Smart Watches</p>
+      <p>TRebel</p>
+      <p>Misfit</p>
+      <p>Gift Card</p>
+      <p>Rock In India</p>
+      <p>Earn Rs.100</p>
+  </div>
+  <div>
+      <h3>HELP</h3>
+      <p>Track Your Order</p>
+      <p>Warranty & Support</p>
+      <p>Return Policy</p>
+      <p>Service Centers</p>
+      <p>Gift Card</p>
+      <p>Bulk Orders</p>
+      <p>FAQs</p>
+  </div>
+  <div>
+      <h3>COMPANY</h3>
+      <p>About boAt</p>
+      <p>News</p>
+      <p>Read Our Blog</p>
+      <p>Careers</p>
+      <p>Security</p>
+      <p>Terms of Service</p>
+      <p>Privacy Policy</p>
+      <p>Investor Relations</p>
+      <p>Social Responsibility</p>
+     
+  </div>
+  </div>   
+    </div>
+  
+
+
+
 
   </body>
 </html>
 
 <script>
+ let cartLS = JSON.parse(localStorage.getItem("cart-page"))||[]
+ 
+ addToTable(cartLS)
+
+function totalprice(cartLS){
+ 
+ let total=cartLS.reduce(function(pri,el){
+  console.log(el.h2.trim().split(" ")[1])
+  return pri+ Number(el.h2.trim().split(" ")[1])
+
+ },0)
+
+ document.getElementById("price").innerText=total
+}
+
+function addToTable(cartLS){
+  document.querySelector("#tbody").innerHTML=""
+  cartLS.forEach(function(el,index){
+
+let tr  = document.createElement("tr")
+let td1  = document.createElement("td")
+let img= document.createElement("img")
+img.src = el.img
+td1.append(img)
+
+let td2  = document.createElement("td")
+td2.innerText = el.h4
+let td3  = document.createElement("td")
+td3.innerText = el.h2
+let td4  = document.createElement("td")
+td4.innerText = "Remove"
+td4.addEventListener("click",function(){
+removeItem(index)
+})
+
+tr.append(td1,td2,td3,td4)
+document.querySelector("#tbody").append(tr)
+console.log(el)
+
+})
+
+totalprice(cartLS)
+}
+
+  
+ 
+
+  function removeItem(index){
+
+  cartLS=JSON.parse(localStorage.getItem("cart-page"))||[]
+  cartLS.splice(index,1)
+   localStorage.setItem("cart-page",JSON.stringify(cartLS))
+   addToTable(cartLS)
+  }
+  
+  // console.log(cartLS)
+
 
 
 </script>

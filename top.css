@@ -6,7 +6,7 @@ div{
 img{
     width: 100%;
 }
-button{
+button1{
     position: absolute;
     top:38%;
     font-size:50px;
@@ -15,9 +15,9 @@ button{
    color:red;
    border: 0px;
 }
-button:nth-child(2){
+button1:nth-child(2){
     left:5px
 }
-button:nth-child(3){
+button1:nth-child(3){
     right:5px
 }

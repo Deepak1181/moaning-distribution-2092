@@ -3,13 +3,15 @@
     color: white;
     text-align: center;
    justify-content: center;
-   padding: 20px;
+   padding: 90px;
+   text-decoration: none;
 }
 form,input,button{
     margin-top: 10px;
   padding: 10px 30px;
   background-color: rgb(43, 39, 39);
   color: white;
+  
 }
 button{
     background-color: red;
@@ -19,8 +21,12 @@ button{
 }
 p{
     margin-left: 30px;
+    
 }
 button:hover{
     color:#fff;
     cursor: pointer;
+}
+a{
+    color: white;
 }
